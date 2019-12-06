@@ -15,3 +15,7 @@ wget --no-check-certificate ${vokins_hosts} -O hosts
 
 # 下载 google hosts
 wget --no-check-certificate ${google_hosts} -O gghosts
+
+# 重启 dnsmasq
+/sbin/restart_dhcpd
+

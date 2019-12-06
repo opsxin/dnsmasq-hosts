@@ -35,3 +35,6 @@ wget --no-check-certificate ${update} -O ${path}/update.sh
 wget --no-check-certificate ${delete} -O ${path}/delete.sh
 chmod +x ${path}/update.sh ${path}/delete.sh
 
+echo "更新规则"
+/bin/sh ${path}/update.sh
+
