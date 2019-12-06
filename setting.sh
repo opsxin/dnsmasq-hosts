@@ -4,6 +4,7 @@ dnsmasq_path="/etc/storage/dnsmasq"
 path="${dnsmasq_path}/host"
 update="https://raw.githubusercontent.com/opsxin/dnsmasq-hosts/master/update.sh"
 delete="https://raw.githubusercontent.com/opsxin/dnsmasq-hosts/master/delete.sh"
+merge="https://raw.githubusercontent.com/opsxin/dnsmasq-hosts/master/merge.sh"
 
 echo "开始配置 dnsmasq"
 sed -i "/\/host\//d" ${dnsmasq_path}/dnsmasq.conf
@@ -33,7 +34,8 @@ fi
 echo "下载相关脚本"
 wget --no-check-certificate ${update} -O ${path}/update.sh 
 wget --no-check-certificate ${delete} -O ${path}/delete.sh
-chmod +x ${path}/update.sh ${path}/delete.sh
+wget --no-check-certificate ${merge} -O ${path}/merge.sh
+chmod +x ${path}/update.sh ${path}/delete.sh ${path}/merge.sh
 
 echo "更新规则"
 /bin/sh ${path}/update.sh

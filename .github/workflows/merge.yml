@@ -1,0 +1,19 @@
+name: merge hosts
+
+on: 
+  push:
+    branches: master
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run merge script
+      run: /bin/bash merge.sh
+    - name: Upload hosts
+      uses: actions/upload-artifact@v1.0.0
+      with: 
+        name: hosts
+        path: ./hosts
+
