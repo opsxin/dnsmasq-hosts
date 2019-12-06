@@ -1,6 +1,6 @@
 #!/bin/sh
 
-path="/etc/storage/dnsmasq/hosts"
+path="/etc/storage/dnsmasq/host"
 vokins_hosts="https://raw.githubusercontent.com/vokins/yhosts/master/hosts"
 google_hosts="https://raw.githubusercontent.com/googlehosts/hosts/master/hosts-files/dnsmasq.conf"
 

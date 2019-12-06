@@ -10,4 +10,4 @@ sed -i '/\/hosts\//d' /etc/storage/cron/crontabs/$http_username
 sed -i '/\/hosts\//d' /etc/storage/post_wan_script.sh
 
 # 删除相关文件
-rm -rf /etc/storage/dnsmasq/hosts
+rm -rf /etc/storage/dnsmasq/host
